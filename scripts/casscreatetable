@@ -1,0 +1,11 @@
+CREATE KEYSPACE bookstore WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+CREATE TYPE bookstore.book (
+          Title text,
+);
+CREATE TABLE bookstore.authors (
+	Id uuid PRIMARY KEY,
+	FirstName text,
+	LastName text,
+	Email text,
+	Books set<frozen <book>>,
+);

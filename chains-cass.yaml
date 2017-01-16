@@ -1,0 +1,27 @@
+Create:
+        Chain:
+        - Name: 'msgpack2json'
+          Command: 'msgpack2json'
+          Arguments:
+        - Name: 'awk'
+          Command: 'awk'
+          Arguments:
+                - "{print \"INSERT INTO bookstore.authors JSON '\" $1 \"';\"}"
+        - Name:
+          Command: 'cqlsh'
+        - Name:
+          Command: 'echo'
+          Arguments:
+                - 'success'
+Id:
+        Chain:
+        - Name: 'cat'
+          Command: 'cat'
+          Arguments:
+                - '/proc/sys/kernel/random/uuid'
+        - Name: 'tr'
+          Command: 'tr'
+          Arguments:
+                - '-d'
+                - '\n'
+

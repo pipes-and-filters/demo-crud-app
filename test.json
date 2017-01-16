@@ -1,0 +1,13 @@
+{
+		"Method": "Create",
+		"Author": {
+			"FirstName":"test",
+			"LastName":"test",
+			"Email": "myemail@this.com",
+			"Books": [
+				{
+					"Title": "test"
+				}
+			]
+		}
+}
